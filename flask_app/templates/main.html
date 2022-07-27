@@ -12,5 +12,31 @@
         <h1>Welcome {{user.first_name}}</h1>
         <a href="/logout" class="btn btn-info">Logout</a>
     </div>
+    <div class="cont">
+        <div class="create_form">
+            <form action="/create_item" method="POST">
+                <div class="actions">
+                    <label for="name"> Name : </label>
+                    <input type="text" name="name" required>
+                    <label for="ingridients">Ingredients</label>
+                    <input type="text" name="ingredients" required>
+                </div>
+                <div class="actions">
+                    <label for="price">Price:</label>
+                    <input type="number" name="price" required>
+                    
+                    <label for="category">Category</label>
+                    <select name="category" id="category" required>
+                        <option value="calzone">Calzone</option>
+                        <option value="desert">Desert</option>
+                        <option value="focaccia">Focaccia</option>
+                        <option value="pizza">Pizza</option>
+                        <option value="antipasti">Antipasti</option>
+                    </select>
+                </div>
+                <button  class="register_btn"> Add New Pizza To Menu</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
