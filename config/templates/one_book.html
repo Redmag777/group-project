@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> show book</title>
+</head>
+<body>
+    <nav class="head">
+        <h1>Welcome {{user.first_name}}</h1>
+        <div>
+            <button><a href="/main" >Dashboard</a></button>
+            <button><a href="/logout" >Logout</a></button>
+        </div>
+    </nav>
+    <div>
+        <div>
+            <h2>{{book.name}}</h2>
+            <p>Description: {{book.description}}</p>
+            <p >Under 30 Minutes:
+                {% if recipe.under30 == 1 %}
+                Yes
+                {% else %}
+                No
+                {% endif %}
+            </p>
+            <p class="card-text">Instructions: {{recipe.instructions}}</p>
+            <p class="card-text">Date Made {{recipe.date_made.strftime('%Y-%m-%d')}}</p>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
