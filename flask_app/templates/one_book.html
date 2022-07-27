@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> show book</title>
+</head>
+<body>
+    <nav class="head">
+        <h1>Welcome {{user.first_name}}</h1>
+        <div>
+            <button><a href="/main" >Dashboard</a></button>
+            <button><a href="/logout" >Logout</a></button>
+        </div>
+    </nav>
+    <div>
+        <div>
+            <h2>{{book.name}}</h2>
+            <p>Description: {{book.description}}</p>
+            <p>Date created: {{book.created_at}}</p>
+            <p>Last updated: {{book.updated_at}}</p>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
