@@ -9,33 +9,26 @@
 </head>
 <body>
     <div class="head"> 
-        <h1>Welcome {{user.first_name}}</h1>
+        <h1>Welcome {{users.first_name}}</h1>
         <a href="/logout" class="btn btn-info">Logout</a>
     </div>
     <div class="cont">
         <div class="create_form">
-            <form action="/create_item" method="POST">
+            <form action="/create_book" method="POST">
                 <div class="actions">
-                    <label for="name"> Name : </label>
-                    <input type="text" name="name" required>
-                    <label for="ingridients">Ingredients</label>
-                    <input type="text" name="ingredients" required>
+                    <label for="title"> Title : </label>
+                    <input type="text" name="title" required>
+                    <label for="description">Description :</label>
+                    <input type="text" name="description" required>
                 </div>
-                <div class="actions">
-                    <label for="price">Price:</label>
-                    <input type="number" name="price" required>
-                    
-                    <label for="category">Category</label>
-                    <select name="category" id="category" required>
-                        <option value="calzone">Calzone</option>
-                        <option value="desert">Desert</option>
-                        <option value="focaccia">Focaccia</option>
-                        <option value="pizza">Pizza</option>
-                        <option value="antipasti">Antipasti</option>
-                    </select>
-                </div>
-                <button  class="register_btn"> Add New Pizza To Menu</button>
+                <button  class="register_btn"> Add New Book</button>
             </form>
+        </div>
+        <div>
+            {% for book in all_books %}
+            <a href="/book/{{book.id}}"><h3>{{book.title}}</h3></a>
+            <p>"{{book.first_name}} {{book.last_name}}"</p>
+            {% endfor %}
         </div>
     </div>
 </body>

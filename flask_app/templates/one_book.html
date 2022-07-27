@@ -8,20 +8,47 @@
 </head>
 <body>
     <nav class="head">
-        <h1>Welcome {{user.first_name}}</h1>
+        <h1>Welcome {{users.first_name}}</h1>
         <div>
             <button><a href="/main" >Dashboard</a></button>
             <button><a href="/logout" >Logout</a></button>
         </div>
     </nav>
     <div>
+        {% if users.email != book.email %}
         <div>
             <h2>{{book.name}}</h2>
             <p>Description: {{book.description}}</p>
             <p>Date created: {{book.created_at}}</p>
             <p>Last updated: {{book.updated_at}}</p>
         </div>
-
+        {% endif %}
+        {% if users.email == book.email %}
+        <div>
+            <form action="/update/book" method="POST">
+                {% with messages = get_flashed_messages(category_filter=["book"]) %}
+                {% if messages %}
+                    <div class="messages" role="alert">
+                        {% for message in messages %}
+                            <p>{{message}}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+                <div class="actions">
+                    <input type="hidden" name="id" value="{{book.id}}">
+                    <label for="title"> Title : </label>
+                    <input type="text" value="{{book.title}}" name="title" >
+                    <label for="description">Description :</label>
+                    <input type="text" name="description" value="{{book.description}}" >
+                    <p>Date created: {{book.created_at}}</p>
+                    <p>Last updated: {{book.updated_at}}</p>
+                </div>
+                <button  class="register_btn"> Update Book</button>
+            </form>
+            <a href="/delete/{{book.id}}"><button>Delete</button></a>
+        </div>
+        {% endif %}
 
     </div>
 
