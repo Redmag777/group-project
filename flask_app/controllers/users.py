@@ -48,7 +48,9 @@ def books():
     data={
         'user_id': session['user_id']
     }
-    return render_template('main.html', users=User.get_by_id(data), all_books = Book.get_all())
+    user=User.get_by_id(data)
+    all_books=Book.get_all()
+    return render_template('main.html', user= user, all_books =all_books)
 
 
 @app.route('/logout')

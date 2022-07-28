@@ -28,20 +28,12 @@ class User:
             return False
         return cls(results[0])
 
-    @classmethod
-    def update(cls, data):
-        query = 'UPDATE users SET first_name = %(first_name)s, last_name = %(last_name)s , email = %(email)s WHERE id=%(user_id)s;'
-        return connectToMySQL(cls.db).query_db(query, data)
-
-    @classmethod
-    def get_owner(cls):
-        query = "SELECT * FROM users WHERE id = 1;"
-        return  connectToMySQL(cls.db).query_db(query)
 
     @classmethod
     def get_by_id(cls,data):
         query = "SELECT * FROM users WHERE id = %(user_id)s;"
-        return  connectToMySQL(cls.db).query_db(query,data)
+        results = connectToMySQL(cls.db).query_db(query,data)
+        return cls(results[0])
 
     @staticmethod
     def validate_register(user):

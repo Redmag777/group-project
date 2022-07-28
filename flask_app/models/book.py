@@ -21,7 +21,7 @@ class Book:
 
     @classmethod
     def get_one(cls,data):
-        query = "SELECT * FROM books WHERE id = %(book_id)s LEFT JOIN users on books.user_id = users.id;"
+        query = "SELECT * FROM books LEFT JOIN users on books.user_id = users.id WHERE books.id = %(book_id)s;"
         return connectToMySQL(cls.db).query_db(query,data)
 
 

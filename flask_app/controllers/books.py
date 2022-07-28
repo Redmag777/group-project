@@ -11,7 +11,7 @@ def show_book(id):
         'user_id': session['user_id'],
         'book_id': id
     }
-    return render_template('one_book.html', users=User.get_by_id(data), book = Book.get_one(data))
+    return render_template('one_book.html', user=User.get_by_id(data), one_book =Book.get_one(data))
 
 @app.route('/delete/<int:id>')
 def destroy_book(id):
@@ -43,11 +43,10 @@ def update_book():
         return redirect('/logout')
     if not Book.validate_book(request.form):
         return redirect(request.referrer)
-    
     data = {
         "title": request.form["title"],
         "description": request.form["description"],
-        "id": request.form["id"]
+        "book_id": request.form["id"]
     }
     Book.update(data)
     return redirect('/')

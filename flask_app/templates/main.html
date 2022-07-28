@@ -4,24 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>book club</title>
 </head>
 <body>
-    <div class="head"> 
-        <h1>Welcome {{users.first_name}}</h1>
-        <a href="/logout" class="btn btn-info">Logout</a>
+    <div > 
+        <h1>Welcome {{user.first_name}}</h1>
+        <a href="/logout" >Logout</a>
     </div>
-    <div class="cont">
-        <div class="create_form">
+    <div >
+        <div >
             <form action="/create_book" method="POST">
-                <div class="actions">
+                <div >
                     <label for="title"> Title : </label>
-                    <input type="text" name="title" required>
+                    <input type="text" name="title" >
                     <label for="description">Description :</label>
-                    <input type="text" name="description" required>
+                    <input type="text" name="description" >
                 </div>
-                <button  class="register_btn"> Add New Book</button>
+                <button > Add New Book</button>
             </form>
         </div>
         <div>
