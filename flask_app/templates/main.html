@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book club</title>
+</head>
+<body>
+    <div > 
+        <h1>Welcome {{user.first_name}}</h1>
+        <a href="/logout" >Logout</a>
+    </div>
+    <div >
+        <div >
+            <form action="/create_book" method="POST">
+                <div >
+                    <label for="title"> Title : </label>
+                    <input type="text" name="title" >
+                    <label for="description">Description :</label>
+                    <input type="text" name="description" >
+                </div>
+                <button > Add New Book</button>
+            </form>
+        </div>
+        <div>
+            {% for book in all_books %}
+            <a href="/book/{{book.id}}"><h3>{{book.title}}</h3></a>
+            <p>"{{book.first_name}} {{book.last_name}}"</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
