@@ -1,0 +1,129 @@
+.container {
+    padding: 50px;
+    display: flex;
+}
+.register {
+    background-color: cornsilk;
+    width: 500px;
+    height: 275px;
+    margin: 30px;
+    padding: 10px;
+    border-radius: 1%;
+}
+.login {
+    background-color: cornsilk;
+    width: 290px;
+    height: 180px;
+    margin: 30px;
+    margin-left: 200px;
+    border-radius: 1%
+ 
+}
+.head {
+    margin: 70px;
+    margin-left: 150px;
+    display: flex;
+}
+.btn-info {
+    margin-left: 30px;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    margin-top: 10px;
+}
+.actions {
+   margin-left: 120px;
+   
+}
+.description {
+    margin-left: 550px;
+}
+.descr {
+    width: 400px;
+    height: 150px;
+}
+.register_btn {
+    margin-left: 165px;
+    background-color:cadetblue;
+    color: aliceblue;
+
+}
+.books {
+    margin-left: 120px;
+    margin-top: 50px;
+}
+.messages {
+    margin-left: 120px;
+}
+
+.welcome {
+    margin: 20px;
+}
+.log_out {
+    margin-left: 20px;
+    background-color: rgb(31, 31, 77);
+
+}
+.dashboard {
+    margin-left: 1300px;
+    background-color: rgb(17, 25, 63);
+    color: aliceblue;
+}
+.update {
+    color: aliceblue;
+    width: 300px;
+    height: 200px;
+    margin: 100px;
+}
+.update_book {
+    background-color: cadetblue;
+    color: aliceblue;
+    margin-bottom: 20px;
+}
+.delete_book {
+    background-color: cadetblue;
+    color: aliceblue;
+    margin-bottom: 20px;
+    width: 110px;
+}
+.edit_description {
+    width: 400px;
+    height: 200px;
+}
+.email {
+    margin-left: 93px;
+    margin-top: 5px;
+}
+.password {
+    margin-left: 62px;
+    margin-top: 5px;
+}
+.confirm_password {
+    margin-top: 5px;
+}
+.name {
+    margin-left: 55px;
+    margin-top: 5px;
+}
+.login_email {
+    margin-left: 31px;
+    margin-bottom: 5px;
+}
+.log {
+    margin: 5px;
+    margin-left: 10px;
+}
+.submit {
+    margin: 20px;
+    height: 30px;
+    width: 90px;
+    background-color: cadetblue;
+    color: aliceblue;
+}
+.reg2 {
+    background-color: cadetblue;
+    color: aliceblue;
+}
+.pass {
+    margin-left: 5px;
+}
